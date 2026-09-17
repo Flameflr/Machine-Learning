@@ -1,0 +1,10 @@
+1. building a linear regression modell to predict MPG (Miles per Gallon) using the weight of the car.
+
+2. the modell uses the Ordinary least squares formula (OLS-formula) to calculate b0 and b1
+
+    b0: y-intercept (german: y-achsenabschnitt)
+    b1: slope (deutsch: steigung)
+
+3. with this two components, the line can be build with y = b0 + b1 * x. The OLS-formula ensures, that the builded line has the best approximation to to all training data. 
+
+4. Worst Case: Underfitting, cause your data set is too small. Overfitting is not possible.
