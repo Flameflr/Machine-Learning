@@ -62,14 +62,21 @@ int main() {
       slope_derivation = slope_derivation / Weight_scaled.size();
       y_intercept_derivation = y_intercept_derivation / Weight_scaled.size();
 
-      cout << slope_derivation << ' ' << y_intercept_derivation << ' ' << slope << ' ' << y_intercept << '\n';
+      // cout << slope_derivation << ' ' << y_intercept_derivation << ' ' << slope << ' ' << y_intercept << '\n';
 
       slope -= slope_derivation * learningFaktor;
       y_intercept -= y_intercept_derivation * learningFaktor;
    }
    
-   int testwert = 2000;
+   double testwert = 3504;
    testwert = (testwert - mittelwert)/std_Abw;
    y = y_intercept + slope * testwert;
    cout << y;
+
+ofstream outputfile ("/home/yannick/Programmieren/Projects/MachineLearning/LinearRegression/gradient_descent_function.csv");
+
+y_intercept = y_intercept - (slope * mittelwert) / std_Abw;
+slope = slope/std_Abw;
+
+outputfile << y_intercept << "," << slope << '\n';
 }
