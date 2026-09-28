@@ -58,6 +58,7 @@ int main() {
 
     b0 = mpg_sum - b1*weight_sum;
     
-    double x = 4354;
+    cout << b1 << ' ' << b0 << '\n';
+    double x = 2000;
     cout << b0 + b1*x;
 }
