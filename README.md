@@ -1,25 +1,25 @@
-#Content
+# Content
 
 
-##Linear Regression
+## Linear Regression
 
-###AutoMPG
+### AutoMPG
 
--> Predicts Miles per Gallon based on the weight of the car 
+- Predicts Miles per Gallon based on the weight of the car 
 
-####Gradient Descent
+#### Gradient Descent
 
--> uses Linear Regression with Gradient Descent to compute the best linear function
+- uses Linear Regression with Gradient Descent to compute the best linear function
 
-####OLS
+#### OLS
 
--> uses Ordinary Least Squares to compute the best linear function
+- uses Ordinary Least Squares to compute the best linear function
 
 
-##Logistic Regression
+## Logistic Regression
 
-###Banknote Authentication
+### Banknote Authentication
 
--> Decides whether a banknote is real or fake using computed weights for different parameters
--> computes the weights using the binary cross entropy loss function with gradient descent
+- Decides whether a banknote is real or fake using computed weights for different parameters
+- computes the weights using the binary cross entropy loss function with gradient descent
 
