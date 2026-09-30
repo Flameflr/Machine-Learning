@@ -18,7 +18,8 @@ int main() {
    vector<double> Z;
    vector<double> Sigmoid;
    vector<double> weights_gradient;
-   vector<double> testwert = {-1.3971,3.3191,-1.3927,-1.9948};
+   vector<double> testwert = {3.6216,8.6661,-2.8073,-0.44699};
+   vector<double> points;
 
 
    ifstream file ("banknote_authentication.data");
@@ -72,10 +73,15 @@ int main() {
       if (k % 100 == 0) cout << estimation << '\n';
    }
 
-   ofstream output ("/home/yannick/Programmieren/Projects/MachineLearning/LogisticRegression/weights.csv");
+   ofstream output ("/home/yannick/Programmieren/Projects/MachineLearning/LogisticRegression/points.csv");
 
-   output << "weight1" << "," << "weight2" << "," << "weight3" << "," << "weight4" << "," << "b";
-   output << '\n';
-   output << weights[0] << "," << weights[1] << "," << weights[2] << "," << weights[3] << "," << b;
+   for (int i = 0; i < df.size(); i++) {
+
+      double temp = df[i][0] * weights[0] + df[i][1] * weights[1] + df[i][2] * weights[2] + df[i][3] * weights[3] + b;
+      points.push_back(1/(1 + 1/exp(temp)));
+
+      output << points[i] << '\n';
+   }
+
 }
 
