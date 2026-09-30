@@ -18,7 +18,7 @@ int main() {
    vector<double> Z;
    vector<double> Sigmoid;
    vector<double> weights_gradient;
-   vector<double> testwert = {3.6216,8.6661,-2.8073,-0.44699};
+   vector<double> testwert = {-1.3971,3.3191,-1.3927,-1.9948};
 
 
    ifstream file ("banknote_authentication.data");
@@ -71,5 +71,11 @@ int main() {
 
       if (k % 100 == 0) cout << estimation << '\n';
    }
+
+   ofstream output ("/home/yannick/Programmieren/Projects/MachineLearning/LogisticRegression/weights.csv");
+
+   output << "weight1" << "," << "weight2" << "," << "weight3" << "," << "weight4" << "," << "b";
+   output << '\n';
+   output << weights[0] << "," << weights[1] << "," << weights[2] << "," << weights[3] << "," << b;
 }
 
