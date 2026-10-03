@@ -8,6 +8,7 @@ AutoMPG:
 
 - OLS - uses Ordinary Least Squares to compute the best linear function
 
+![Linear Regression visualisation](LinearRegression/auto-mpg-visualisation.png)
 
 # Logistic Regression
 
@@ -15,4 +16,6 @@ Banknote Authentication:
 
 - Decides whether a banknote is real or fake using computed weights for different parameters
 - computes the weights using the binary cross entropy loss function with gradient descent
+
+![Logistic Regression visualisation](LogisticRegression/banknote_authentication.png)
 
